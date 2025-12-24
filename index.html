@@ -69,32 +69,6 @@ body{
   max-width:650px;
 }
 
-.buttons{
-  margin-top:30px;
-}
-
-.buttons a{
-  display:inline-block;
-  padding:14px 30px;
-  margin-right:16px;
-  border-radius:30px;
-  background:var(--grad);
-  color:#000;
-  font-weight:700;
-  text-decoration:none;
-  transition:.35s;
-}
-
-.buttons a.secondary{
-  background:transparent;
-  color:white;
-  border:1px solid var(--border);
-}
-
-.buttons a:hover{
-  transform:translateY(-5px) scale(1.05);
-}
-
 .profile{
   width:280px;
   height:280px;
@@ -104,11 +78,11 @@ body{
   box-shadow:0 40px 90px rgba(0,0,0,.6);
 }
 
-/* SECTIONS */
+/* SECTIONS (reduced spacing) */
 section{
   max-width:1200px;
   margin:auto;
-  padding:100px 20px;
+  padding:70px 20px;
 }
 
 h2{
@@ -128,8 +102,20 @@ h2{
   box-shadow:0 35px 80px rgba(0,0,0,.5);
 }
 
+.card ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
+.card ul li{
+  margin-bottom:12px;
+  font-size:16px;
+}
+
+/* FOOTER */
 footer{
-  padding:50px;
+  padding:40px;
   text-align:center;
   color:var(--muted);
 }
@@ -157,11 +143,6 @@ footer{
         system design, and building scalable, real-world applications.
         I combine solid fundamentals with modern tools to create reliable software.
       </p>
-
-      <div class="buttons">
-        <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank">Check My GitHub</a>
-        <a href="#contact" class="secondary">Contact Me</a>
-      </div>
     </div>
 
     <img src="profile.jpg" class="profile" alt="Profile photo">
@@ -174,12 +155,11 @@ footer{
   <div class="card reveal">
     <p>
       I am a Java-focused software engineer with hands-on experience in developing
-      backend systems using Core Java, JDBC, Swing, and Spring MVC. My approach to
-      development emphasizes clean architecture, clarity in logic, and long-term
-      maintainability over quick fixes.
+      backend systems using Core Java, JDBC, Swing, and Spring MVC. My approach
+      emphasizes clean architecture, clarity in logic, and long-term maintainability.
     </p>
     <p>
-      I enjoy translating real-world problems into structured software solutions
+      I enjoy converting real-world requirements into structured software solutions
       and continuously improving my understanding of data structures, algorithms,
       and backend system behavior.
     </p>
@@ -190,21 +170,24 @@ footer{
 <section>
   <h2>Skills & Expertise</h2>
   <div class="card reveal">
-    <p>
-      <strong>Java & Backend Development:</strong> Strong command of Core Java,
-      object-oriented programming, exception handling, collections, multithreading,
-      and JDBC-based database interaction.
-    </p>
-    <p>
-      <strong>Frameworks & Tools:</strong> Experience with Swing for desktop
-      applications and Spring MVC for structured backend development.
-      Familiar with MySQL and file-based data persistence.
-    </p>
-    <p>
-      <strong>Problem Solving:</strong> Solid understanding of data structures,
-      algorithms, and logical problem-solving with a focus on writing efficient,
-      readable, and maintainable code.
-    </p>
+    <p><strong>Java & Backend:</strong> Core Java, OOPs, JDBC, multithreading, exception handling.</p>
+    <p><strong>Frameworks:</strong> Java Swing, Spring MVC, MySQL integration.</p>
+    <p><strong>Problem Solving:</strong> Data structures, algorithms, clean and efficient logic.</p>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section>
+  <h2>Certifications</h2>
+  <div class="card reveal">
+    <ul>
+      <li>✔ Data Structures and Algorithms</li>
+      <li>✔ Programming Fundamentals</li>
+      <li>✔ Programming Best Practices</li>
+      <li>✔ Data Science & Analytics</li>
+      <li>✔ Data Access Using JDBC</li>
+      <li>✔ Java Complete Course (Visual Studio Code)</li>
+    </ul>
   </div>
 </section>
 
@@ -214,19 +197,17 @@ footer{
   <div class="card reveal">
     <p>
       Alongside backend engineering, I actively explore artificial intelligence
-      and machine learning concepts with a practical mindset. My focus is not
-      limited to using AI tools, but understanding how intelligent systems work
-      internally and how they integrate with traditional software architectures.
+      with a practical and system-oriented mindset. I focus on understanding how
+      intelligent systems work internally and how they integrate with real software.
     </p>
     <p>
-      I have worked on Java-based AI research projects such as chatbot systems,
-      studying response generation, logic flow, and basic NLP concepts. I am
-      particularly interested in building explainable and reliable AI-assisted
-      applications rather than black-box solutions.
+      I have worked on Java-based chatbot research projects, studying logic flow,
+      response generation, and basic NLP concepts, with an emphasis on reliability
+      and explainability rather than black-box usage.
     </p>
     <p>
-      My long-term goal is to work at the intersection of backend engineering and
-      AI, contributing to systems that are scalable, intelligent, and production-ready.
+      My long-term goal is to work at the intersection of backend systems and AI,
+      contributing to scalable, intelligent, production-ready software.
     </p>
   </div>
 </section>
@@ -235,22 +216,22 @@ footer{
 <section id="contact">
   <h2>Contact</h2>
   <div class="card reveal">
-    <p>Email: <a href="mailto:niranjanswain067@gmail.com">Email</a></p>
-    <p>GitHub: <a href="https://github.com/niranjanswain067" target="_blank">GitHub</a></p>
+    <p>Email: <a href="mailto:niranjanswain067@gmail.com">Send Mail</a></p>
+    <p>GitHub: <a href="https://github.com/niranjanswain067" target="_blank">View Repositories</a></p>
     <p>LinkedIn: <a href="https://www.linkedin.com/in/niranjan-swain-b949a224b" target="_blank">View Profile</a></p>
   </div>
 </section>
 
 <footer>
-  © 2025 Niranjan Swain · Software Engineer
+  Niranjan Swain · Software Engineer
 </footer>
 
+<!-- ANIMATIONS -->
 <script>
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.from(".hero-text h1",{y:40,opacity:0,duration:1});
 gsap.from(".hero-text p",{y:30,opacity:0,duration:1,delay:.2});
-gsap.from(".buttons a",{y:20,opacity:0,stagger:.15,delay:.4});
 gsap.from(".profile",{scale:.85,opacity:0,duration:1,delay:.3});
 
 gsap.utils.toArray(".reveal").forEach(el=>{
@@ -269,7 +250,7 @@ const ctx=canvas.getContext("2d");
 function resize(){canvas.width=innerWidth;canvas.height=innerHeight}
 resize();addEventListener("resize",resize);
 
-let particles=[...Array(90)].map(()=>({
+let particles=[...Array(80)].map(()=>({
   x:Math.random()*canvas.width,
   y:Math.random()*canvas.height,
   r:Math.random()*2+1,
@@ -295,4 +276,3 @@ animate();
 
 </body>
 </html>
-
