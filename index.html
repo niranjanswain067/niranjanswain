@@ -29,7 +29,6 @@ body{
   overflow-x:hidden;
 }
 
-/* BACKGROUND */
 #bg-canvas{
   position:fixed;
   inset:0;
@@ -78,7 +77,7 @@ body{
   box-shadow:0 40px 90px rgba(0,0,0,.6);
 }
 
-/* SECTIONS (reduced spacing) */
+/* SECTIONS */
 section{
   max-width:1200px;
   margin:auto;
@@ -110,10 +109,8 @@ h2{
 
 .card ul li{
   margin-bottom:12px;
-  font-size:16px;
 }
 
-/* FOOTER */
 footer{
   padding:40px;
   text-align:center;
@@ -136,16 +133,15 @@ footer{
 <!-- HERO -->
 <div class="hero">
   <div class="hero-inner">
-    <div class="hero-text">
+    <div>
       <h1>Niranjan Swain</h1>
       <p>
-        Software Engineer with a strong focus on Java backend development,
+         Software Engineer with a strong focus on Java backend development,
         system design, and building scalable, real-world applications.
         I combine solid fundamentals with modern tools to create reliable software.
       </p>
     </div>
-
-    <img src="profile.jpg" class="profile" alt="Profile photo">
+    <img src="profile.jpg" class="profile" alt="Profile Photo">
   </div>
 </div>
 
@@ -154,7 +150,7 @@ footer{
   <h2>About Me</h2>
   <div class="card reveal">
     <p>
-      I am a Java-focused software engineer with hands-on experience in developing
+       I am a Java-focused software engineer with hands-on experience in developing
       backend systems using Core Java, JDBC, Swing, and Spring MVC. My approach
       emphasizes clean architecture, clarity in logic, and long-term maintainability.
     </p>
@@ -170,9 +166,27 @@ footer{
 <section>
   <h2>Skills & Expertise</h2>
   <div class="card reveal">
-    <p><strong>Java & Backend:</strong> Core Java, OOPs, JDBC, multithreading, exception handling.</p>
-    <p><strong>Frameworks:</strong> Java Swing, Spring MVC, MySQL integration.</p>
-    <p><strong>Problem Solving:</strong> Data structures, algorithms, clean and efficient logic.</p>
+    <p><strong>Java & Backend:</strong> Core Java, OOPs, JDBC, Multithreading, Exception Handling.</p>
+    <p><strong>Frameworks:</strong> Java Swing, Spring MVC, MySQL Integration.</p>
+    <p><strong>Problem Solving:</strong> Data Structures, Algorithms, Clean and Efficient Logic.</p>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section>
+  <h2>Education</h2>
+  <div class="card reveal">
+    <p>
+      <strong>Master of Computer Applications (MCA)</strong><br>
+      Srusti Academy of Management and Technology (Autonomous)<br>
+      <span style="color:var(--muted)">2025 – 2027</span>
+    </p>
+
+    <p>
+      <strong>Bachelor of Computer Applications (BCA)</strong><br>
+      MITS School of Biotechnology<br>
+      <span style="color:var(--muted)">2022 – 2025</span>
+    </p>
   </div>
 </section>
 
@@ -186,7 +200,7 @@ footer{
       <li>✔ Programming Best Practices</li>
       <li>✔ Data Science & Analytics</li>
       <li>✔ Data Access Using JDBC</li>
-      <li>✔ Java Complete Course (Visual Studio Code)</li>
+      <li>✔ Java Complete Course (VS Code)</li>
     </ul>
   </div>
 </section>
@@ -213,11 +227,11 @@ footer{
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
+<section>
   <h2>Contact</h2>
   <div class="card reveal">
-    <p>Email: <a href="mailto:niranjanswain067@gmail.com">Send Mail</a></p>
-    <p>GitHub: <a href="https://github.com/niranjanswain067" target="_blank">View Repositories</a></p>
+    <p>Email: <a href="mailto:niranjanswain067@gmail.com">Email Me</a></p>
+    <p>GitHub: <a href="https://github.com/niranjanswaino67" target="_blank">View Repositories</a></p>
     <p>LinkedIn: <a href="https://www.linkedin.com/in/niranjan-swain-b949a224b" target="_blank">View Profile</a></p>
   </div>
 </section>
@@ -226,12 +240,10 @@ footer{
   Niranjan Swain · Software Engineer
 </footer>
 
-<!-- ANIMATIONS -->
 <script>
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.from(".hero-text h1",{y:40,opacity:0,duration:1});
-gsap.from(".hero-text p",{y:30,opacity:0,duration:1,delay:.2});
+gsap.from("h1",{y:40,opacity:0,duration:1});
 gsap.from(".profile",{scale:.85,opacity:0,duration:1,delay:.3});
 
 gsap.utils.toArray(".reveal").forEach(el=>{
@@ -239,8 +251,7 @@ gsap.utils.toArray(".reveal").forEach(el=>{
     scrollTrigger:{trigger:el,start:"top 80%"},
     y:40,
     opacity:0,
-    duration:1,
-    ease:"power3.out"
+    duration:1
   });
 });
 
